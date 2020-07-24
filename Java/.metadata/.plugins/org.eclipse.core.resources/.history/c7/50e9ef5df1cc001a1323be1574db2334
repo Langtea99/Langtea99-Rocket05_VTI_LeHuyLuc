@@ -1,0 +1,25 @@
+public class Student {
+	String fullName;
+	int age;
+	public Student(String input_fullName,int input_age)
+	{	
+		fullName = input_fullName;
+		age = input_age;
+	}
+	@Override
+	public String toString()
+	{
+		return fullName + " _ " + age;
+	}
+	public boolean equals(Student other)
+	{
+		if (fullName == other.fullName && age == other.age)
+			{return true;}
+		else
+		{return false;}
+	}
+	public int hash_function()
+	{
+		
+	}
+}

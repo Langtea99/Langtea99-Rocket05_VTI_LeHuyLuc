@@ -1,0 +1,9 @@
+import java.time.LocalDate;
+import java.util.Date;;
+
+public class Group {
+    int groupID;
+    String groupName;
+    Account[] creatorID;
+    LocalDate createDate;
+}

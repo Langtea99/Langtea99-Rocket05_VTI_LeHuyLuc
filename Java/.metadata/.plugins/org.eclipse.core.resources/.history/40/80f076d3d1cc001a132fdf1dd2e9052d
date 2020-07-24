@@ -1,0 +1,19 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+public class Exercise3 {
+
+	public static void main(String[] args) {
+	//Question 1: In ra thông tin Exam thứ 1 và property create date sẽ được format Locale locale = new Locale("vi", "VN");
+
+		DateFormat dateformat = DateFormat.getDateInstance(DateFormat.DEFAULT,
+				locale);
+
+		String date = dateformat.format(account1.createDate);
+
+		System.out.println(exam1.code + ": " + date);theo định dạng vietnamese
+
+	}
+
+}

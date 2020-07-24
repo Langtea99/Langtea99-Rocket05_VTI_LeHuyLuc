@@ -1,0 +1,10 @@
+
+public class Student {
+	String fullName;
+	int age;
+	public Student(String input_fullName,int input_age)
+	{	
+		fullName = input_fullName;
+		age = input_age;
+	}
+}
