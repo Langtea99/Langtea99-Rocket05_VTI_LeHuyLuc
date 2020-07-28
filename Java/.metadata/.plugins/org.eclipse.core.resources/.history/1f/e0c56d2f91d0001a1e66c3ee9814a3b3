@@ -1,0 +1,47 @@
+
+public class Exercise5 {
+
+	public static void main(String[] args) {
+		// create department
+		Department department1 = new Department();
+		department1.departmentID = 1;
+		department1.departmentName = "Sale";
+
+		Department department2 = new Department();
+		department2.departmentID = 2;
+		department2.departmentName = "Marketting";
+		
+		Department department3 = new Department();
+		department3.departmentID = 3;
+		department3.departmentName = "Secretary";
+		
+		Department[] departments = {department1,department2,department3};
+//Question 1:In ra thông tin của phòng ban thứ 1 (sử dụng toString())
+//		question1(department1);
+		
+//Question 2:In ra thông tin của tất cả phòng ban (sử dụng toString())
+//		question2(departments);
+		
+//	Question 3:In ra địa chỉ của phòng ban thứ 1
+//		question3(department1);
+		
+//Question 4: Kiểm tra xem phòng ban thứ 1 có tên là "Phòng A" không?
+		queston4(department1);
+	}
+
+	public static void question3(Department department) {
+		System.out.println(department.hashCode());	
+	}
+
+	public static void question2(Department[] departments) {
+		for (Department department : departments) {
+			System.out.println(department);
+		}
+
+	}
+
+	public static void question1(Department department) {
+		System.out.println(department);
+	}
+
+}

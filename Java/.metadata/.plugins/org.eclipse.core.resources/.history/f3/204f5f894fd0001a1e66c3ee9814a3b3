@@ -1,0 +1,63 @@
+import java.util.Date;
+
+public class Exercise6 {
+
+	public static void main(String[] args) {
+	//Question 1: Tạo method để in ra các số chẵn nguyên dương nhỏ hơn 10
+		sochan();
+	//Question 2: Tạo method để in thông tin các account
+		// Create account
+				Account account1 = new Account();
+				account1.accountID = 1;
+				account1.email = "account@gmail.com";
+				account1.userName = "haidang";
+				account1.fullName ="Nguyen Hai Dang";
+				account1.position = position1;
+				account1.department = department1;
+				account1.createDate = new Date("2020/07/24");
+
+				Account account2 = new Account();
+				account2.accountID = 2;
+				account2.email = "account1@gmail.com";
+				account2.userName = "quanganh";
+				account2.fullName ="Tong Quang Anh";
+				account2.position = position1;
+				account2.department = department1;
+				account2.createDate = new Date("2020/07/24");
+
+				Account account3 = new Account();
+				account3.accountID = 3;
+				account3.email = "account1@gmail.com";
+				account3.userName = "quanganh";
+				account3.fullName ="Tong Quang Anh";
+				account3.position = position3;
+				account3.department = department2;
+				account3.createDate = new Date("2020/07/24");
+		thongtinaccount();
+	}
+	private static void thongtinaccount() {
+		for (int i = 0; i < account.length; i++) 
+		{
+			if (i != 1) {
+				System.out.println("Thông tin account thứ " + (i + 1)
+						+ " là :");
+				System.out.println("ID: " + account[i].accountID);
+				System.out.println("Email: " + account[i].email);
+				System.out.println("UserName: " + account[i].userName);
+				System.out.println("FullName: " + account[i].fullName);
+				System.out.println("Departmaent: " + account[i].department.departmentName);
+				System.out.println("Position: " + account[i].position.positionName);
+				System.out.println("CreateDate: " + account[i].createDate);
+			}
+		}
+		
+	}
+	public static void sochan()
+	{
+		for(int i =0 ;i<10 ;i++)
+		{
+			if(i%2==0)
+				System.out.print(i);
+		}
+	}
+}

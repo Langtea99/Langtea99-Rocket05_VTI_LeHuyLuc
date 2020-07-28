@@ -1,0 +1,7 @@
+
+public class Account {
+	String Email;
+	String Username;
+	String FullName;
+	LocalDate CreateDate;
+}

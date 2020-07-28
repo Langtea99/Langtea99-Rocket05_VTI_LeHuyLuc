@@ -224,7 +224,7 @@ public class Exercise3 {
 				String pattern3 = "yyyy";
 				SimpleDateFormat simpleDateFormat3 = new SimpleDateFormat(pattern3);
 				String	date3 = simpleDateFormat3.format(question2.createDate);
-					System.out.println(date3);
+				System.out.println(date3);
 					
 	//Question 4: Chỉ in ra tháng và năm của create date property trong Question 2
 					String pattern4 = "yyyy-MM";

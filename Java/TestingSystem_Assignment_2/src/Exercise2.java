@@ -24,5 +24,4 @@ public class Exercise2 {
 		String date = simpleDateFormat.format(new Date());
 		System.out.println(date);
 	}
-	//
 }
