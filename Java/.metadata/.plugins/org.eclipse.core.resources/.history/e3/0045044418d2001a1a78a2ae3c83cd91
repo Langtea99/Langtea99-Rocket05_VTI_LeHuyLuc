@@ -1,0 +1,10 @@
+package Inheritance;
+
+public class Exercise5 {
+
+	public static void main(String[] args) {
+		QLCB canbo1 = new QLCB();
+		canbo1.themCanBo();
+	}
+
+}

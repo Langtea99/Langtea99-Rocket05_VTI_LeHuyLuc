@@ -1,0 +1,8 @@
+package Abstraction;
+
+public  class VietnamesePhone extends Phone {
+	public VietnamesePhone() 
+	{
+	}
+
+}

@@ -1,0 +1,36 @@
+package Inheritance;
+
+public class CongNhan extends CanBo{
+	private int bac;
+
+	public CongNhan()
+	{
+		
+	}
+	public CongNhan(int bac) {
+		super();
+		this.bac = bac;
+	}
+	public int getBac() {
+		return bac;
+	}
+
+	public void setBac(int bac) {
+		this.bac = bac;
+	}
+	@Override
+	public void input() {
+		super.input();
+
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Nhập bậc của công nhân: ");
+		bac = scanner.nextByte();
+	}
+
+	@Override
+	public void getInfor() {
+		super.getInfor();
+		System.out.println("Bậc  : " + bac);
+	}
+}

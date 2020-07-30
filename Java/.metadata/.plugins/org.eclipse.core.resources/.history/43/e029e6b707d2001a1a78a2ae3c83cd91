@@ -1,0 +1,10 @@
+
+public class Exercise4 {
+
+	public static void main(String[] args) {
+		Student student =new Student("Luc","Nam Dinh");
+		Student student1 =new Student("ID","Luc","Nam Dinh","8.5");
+		student.toString();
+	}
+
+}

@@ -1,0 +1,12 @@
+package Inheritance;
+
+public class TaiLieu {
+	private int maTaiLieu;
+	private String tenNXB;
+	private int soBanPhatHanh;
+
+	public TaiLieu() {
+		
+	}
+
+}

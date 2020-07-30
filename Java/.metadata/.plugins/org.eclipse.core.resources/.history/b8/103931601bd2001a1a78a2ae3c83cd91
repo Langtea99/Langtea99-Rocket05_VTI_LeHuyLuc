@@ -1,0 +1,8 @@
+package Inheritance;
+
+import java.util.List;
+
+public class QLTV {
+	private List<TaiLieu> taiLieus;
+
+}

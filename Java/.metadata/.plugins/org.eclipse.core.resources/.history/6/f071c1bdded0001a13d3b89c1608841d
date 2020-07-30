@@ -1,0 +1,8 @@
+
+public class Student extends Person{
+	private int mark;	
+	Student()
+	{
+		
+	}
+}

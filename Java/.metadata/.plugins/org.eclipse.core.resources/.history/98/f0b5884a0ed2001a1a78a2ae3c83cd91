@@ -1,0 +1,6 @@
+package Inheritance;
+
+public class CongNhan extends CanBo{
+	private int bac;
+
+}

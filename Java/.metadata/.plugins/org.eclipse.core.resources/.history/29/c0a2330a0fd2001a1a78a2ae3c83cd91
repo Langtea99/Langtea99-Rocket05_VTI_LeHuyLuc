@@ -1,0 +1,10 @@
+package Inheritance;
+
+public class KySu extends CanBo{
+	private String nganhDaoTao;
+	
+	public KySu(){
+		
+	}
+
+}

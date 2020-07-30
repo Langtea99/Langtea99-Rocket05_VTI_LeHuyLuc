@@ -1,0 +1,51 @@
+
+public class Student {
+	protected int id;
+	protected String name;
+	protected String hometown;
+	protected float academic_grade;
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getHometown() {
+		return hometown;
+	}
+
+	public void setHometown(String hometown) {
+		this.hometown = hometown;
+	}
+
+	public float getAcademic_grade() {
+		return academic_grade;
+	}
+
+	public void setAcademic_grade(float academic_grade) {
+		this.academic_grade = academic_grade;
+	}
+
+	public  Student(String name,String hometown)
+	{
+		this.name = name;
+		this.hometown = hometown;
+		academic_grade = 0;
+	}
+public String toSting()
+	{
+		return "Student{"+"Name=" + name + '\'' + ", Hometown='" + hometown + '\'' + ", Academic_grade="+academic_grade;
+	}
+
+}

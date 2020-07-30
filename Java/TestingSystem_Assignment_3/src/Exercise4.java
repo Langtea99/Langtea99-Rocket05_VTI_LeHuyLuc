@@ -53,7 +53,10 @@ public class Exercise4 {
 //		question15();
 		
 //Question 16:Cho một chuỗi str và số nguyên n >= 0. Chia chuỗi str ra làm các phần bằng nhau với n ký tự. Nếu chuỗi không chia được thì xuất ra màn hình “KO”.
-		question16();
+//		question16();
+		
+		String str = "  Le Huy Luc ";
+		demSoTu(str);
 	}
 
 	public static void question16() {
@@ -300,7 +303,34 @@ public static void question10() {
 		System.out.println("Sau khi nối chuỗi : " + s1.concat(s2));
 		scanner.close();	
 	}
-
+	public static void demSoTu(String str)
+	{
+		int tongSoTu = 1;
+		//Buoc1: Chuan hoa
+		while(str.charAt(0) == ' ')
+		{
+			str = str.substring(1);
+		}
+		while(str.charAt(str.length()-1) == ' ')
+		{
+			str = str.substring(0,str.length()-1);
+		}
+		for(int i =0 ;i < str.length()-1 ;i++ )
+		{
+			if(str.charAt(i)==' '&& str.charAt(i+1)==' ')
+			{
+				str = str.substring(0,i).concat(str.substring(i+1));
+				i =i-1;
+			}
+		}
+		for(int i=0;i<str.length()-1;i++)
+		{
+			if(str.charAt(i)==' ')
+				tongSoTu++;
+		}	
+		System.out.println(str);
+		System.out.println(tongSoTu);
+	}
 	public static void question1() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Nhap vao mot chuoi : ");

@@ -1,0 +1,44 @@
+package Inheritance;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class QLTV {
+	private ArrayList<TaiLieu> taiLieus;
+
+	public QLTV() {
+		
+	}
+	public void inputTaiLieu() {
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Nhập số tài liệu mà bạn muốn nhập:  ");
+		int n = scanner.nextInt();
+
+		byte luaChon;
+		TaiLieu taiLieu = new TaiLieu();
+		for (int i = 0; i < n; i++) {
+
+			System.out.println("Bạn muốn nhập tài liệu nào? (1:Sách || 2: Tạp chí || 3: Báo) ");
+			luaChon = scanner.nextByte();
+
+			switch (choose) {
+			case 1:
+				taiLieu = new Sach();
+				break;
+			case 2:
+				taiLieu = new TapChi();
+				break;
+			case 3:
+				taiLieu = new Bao();
+				break;
+			default:
+				System.out.println("Nhập sai !");
+				i--;
+				break;
+			}
+			taiLieu.input();
+			taiLieus.add(taiLieu);
+		}
+	}
+}

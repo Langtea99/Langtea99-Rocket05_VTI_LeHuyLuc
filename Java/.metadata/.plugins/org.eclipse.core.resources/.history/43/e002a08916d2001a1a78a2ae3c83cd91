@@ -1,0 +1,11 @@
+package Inheritance;
+
+import java.lang.reflect.Array;
+
+public class QLCB {
+	private Array[] canBos;
+	public QLCB() {
+		
+	}
+
+}

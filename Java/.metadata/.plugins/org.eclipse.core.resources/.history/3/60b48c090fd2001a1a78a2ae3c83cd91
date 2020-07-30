@@ -1,0 +1,10 @@
+package Inheritance;
+
+public class NhanVien extends CanBo{
+	private String congViec;
+	
+	public NhanVien(){
+		
+	}
+
+}

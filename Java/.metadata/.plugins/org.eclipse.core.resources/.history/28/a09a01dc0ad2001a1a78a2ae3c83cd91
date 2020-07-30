@@ -1,0 +1,7 @@
+
+public class Circle {
+	private final double PI = 3.14;
+
+	private double radius;
+	private String color;
+}
