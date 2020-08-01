@@ -38,6 +38,7 @@ public class QLCB {
 
 				canBo.input();
 				canBos.add(canBo);
+				canBo.getInfor();
 			}
 		}
 

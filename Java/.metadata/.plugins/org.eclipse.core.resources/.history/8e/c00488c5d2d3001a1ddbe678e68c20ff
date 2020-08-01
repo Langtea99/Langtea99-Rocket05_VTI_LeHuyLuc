@@ -6,7 +6,7 @@ public class Demo {
 
 	public static void main(String[] args) {
 		question2();
-//		question4();	
+		question4();	
 
 	}
 	private static void menuQuesion2() {

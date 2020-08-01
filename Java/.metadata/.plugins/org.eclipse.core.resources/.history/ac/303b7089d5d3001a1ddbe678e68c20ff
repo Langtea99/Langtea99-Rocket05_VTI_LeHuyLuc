@@ -59,16 +59,16 @@ public class CanBo {
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("Nhập họ tên: ");
-		hoTen = scanner.nextLine();
+		String hoTen = scanner.nextLine();
 
 		System.out.print("Nhập tuổi: ");
-		tuoi = scanner.nextByte();
+		byte tuoi = scanner.nextByte();
 
 		System.out.print("Nhập giới tính (0:Nam, 1:Nữ, khác: Unknown): ");
 		setGioiTinh(scanner.nextInt());
 		
 		System.out.print("Nhập địa chỉ: ");
-		diaChi = scanner.next();
+		String diaChi = scanner.next();
 		
 	}
 	public void getInfor() {

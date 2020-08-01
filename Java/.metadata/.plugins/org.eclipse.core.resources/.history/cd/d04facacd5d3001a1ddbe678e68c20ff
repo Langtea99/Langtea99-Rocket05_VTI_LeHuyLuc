@@ -48,10 +48,10 @@ public class TaiLieu {
 		System.out.println("Mã tài liệu: " + maTaiLieu);
 		
 		System.out.print("Nhập tên NXB: ");
-		tenNXB = scanner.nextLine();
+		String tenNXB = scanner.nextLine();
 
 		System.out.print("Nhập số bản phán hành: ");
-		soBanPhatHanh = scanner.nextInt();
+		int soBanPhatHanh = scanner.nextInt();
 	}
 
 	public void getInfor() {

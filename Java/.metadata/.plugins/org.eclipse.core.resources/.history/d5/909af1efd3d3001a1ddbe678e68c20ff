@@ -44,8 +44,9 @@ public class QLCB {
 		// b) Tìm kiếm theo họ tên.
 		public void findCanBo() {
 			Scanner scanner = new Scanner(System.in);
+			String hoTen;
 			System.out.println("Nhập họ tên cần tìm: ");
-			String hoTen = scanner.nextLine();
+			hoTen = scanner.nextLine();
 
 			for (CanBo canBo : canBos) {
 				if (hoTen.equals(canBo.getHoTen())) {

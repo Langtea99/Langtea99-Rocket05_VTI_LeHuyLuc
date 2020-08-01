@@ -11,9 +11,11 @@ public class CongNhan extends CanBo {
 	@Override
 	public void input() {
 		super.input();
+		
 		Scanner scanner = new Scanner(System.in);
+
 		System.out.print("Nhập bậc của công nhân: ");
-		bac = scanner.nextByte();
+		byte bac = scanner.nextByte();
 	}
 
 	@Override
