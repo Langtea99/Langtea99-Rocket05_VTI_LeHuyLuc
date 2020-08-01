@@ -7,19 +7,19 @@ public class QLTV {
 	private ArrayList<TaiLieu> taiLieus;
 
 	public QLTV() {
-		
+		taiLieus = new ArrayList<>();
 	}
 	// a) Thêm mới tài liêu: Sách, tạp chí, báo.
 	public void inputTaiLieu() {
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("Nhập số tài liệu mà bạn muốn nhập:  ");
+		System.out.print("Nhập số tài liệu mà bạn muốn nhập:  ");
 		int n = scanner.nextInt();
 
 		TaiLieu taiLieu = new TaiLieu();
 		for (int i = 0; i < n; i++) {
 
-			System.out.println("Bạn muốn nhập tài liệu nào? (1:Sách || 2: Tạp chí || 3: Báo) ");
+			System.out.print("Bạn muốn nhập tài liệu nào? (1:Sách || 2: Tạp chí || 3: Báo) ");
 			byte luaChon = scanner.nextByte();
 
 			switch (luaChon) {
@@ -45,7 +45,7 @@ public class QLTV {
 		public void deleteTaiLieu() {
 			Scanner scanner = new Scanner(System.in);
 
-			System.out.println("Nhập mã tài liệu cần xóa: ");
+			System.out.print("Nhập mã tài liệu cần xóa: ");
 			int maTaiLieu = scanner.nextInt();
 
 			for (TaiLieu taiLieu : taiLieus) {
@@ -64,7 +64,7 @@ public class QLTV {
 		public void findTaiLieu() {
 			Scanner scanner = new Scanner(System.in);
 			
-			System.out.println("Bạn muốn tìm kiếm theo loại nào? (1:Sách || 2: Tạp chí || 3: Báo)");
+			System.out.print("Bạn muốn tìm kiếm theo loại nào? (1:Sách || 2: Tạp chí || 3: Báo)");
 			int luaChon = scanner.nextByte();
 
 			switch (luaChon) {

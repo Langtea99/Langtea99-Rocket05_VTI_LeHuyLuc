@@ -33,17 +33,17 @@ public class Sach extends TaiLieu {
 	public void input() {
 		super.input();
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Nhập tên tác giả: ");
+		System.out.print("Nhập tên tác giả: ");
 		tenTacGia = scanner.nextLine();
-		System.out.println("Nhập số trang: ");
+		System.out.print("Nhập số trang: ");
 		soTrang = scanner.nextInt();
 	}
 	
 	@Override
 	public void getInfor() {
 		super.getInfor();
-		System.out.println("Tên tác giả: " + tenTacGia);
-		System.out.println("Số trang: " + soTrang);
+		System.out.print("Tên tác giả: " + tenTacGia);
+		System.out.print("Số trang: " + soTrang);
 	}
 
 }

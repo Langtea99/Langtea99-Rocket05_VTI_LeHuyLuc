@@ -1,0 +1,10 @@
+package Inheritance;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		QLCB manager = new QLCB();
+		manager.themCanBo(new NhanVien("Le Huy Luc",20,GioiTinh.Nam,"Nam Dinh","Test"));
+		manager.inTatCaCanBo();
+	}
+}

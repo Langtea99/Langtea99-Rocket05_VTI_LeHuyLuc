@@ -1,0 +1,26 @@
+package Inheritance;
+
+import java.util.Scanner;
+
+public class KySu extends CanBo{
+	public KySu(String hoTen, int tuoi, GioiTinh gioiTinh, String diaChi,String nganhDaoTao) {
+		super(hoTen, tuoi, gioiTinh, diaChi);
+		this.nganhDaoTao = nganhDaoTao;
+	}
+	public KySu() {
+		// TODO Auto-generated constructor stub
+	}
+	private String nganhDaoTao;
+
+	public String getNganhDaoTao() {
+		return nganhDaoTao;
+	}
+
+	public void setNganhDaoTao(String nganhDaoTao) {
+		this.nganhDaoTao = nganhDaoTao;
+	}
+	public String toString()
+	{
+		return super.toString()+"Nganh Dao Tao" + nganhDaoTao;
+	}
+}

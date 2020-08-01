@@ -3,12 +3,13 @@ package Inheritance;
 import java.util.Scanner;
 
 public class TaiLieu {
+	private static int counter = 1000;
 	private int maTaiLieu;
 	private String tenNXB;
 	private int soBanPhatHanh;
 
 	public TaiLieu() {
-		
+		maTaiLieu = ++counter;
 	}
 
 	public TaiLieu(int maTaiLieu, String tenNXB, int soBanPhatHanh) {
@@ -45,12 +46,11 @@ public class TaiLieu {
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Mã tài liệu: " + maTaiLieu);
-		int maTaiLieu = scanner.nextInt();
 		
-		System.out.println("Nhập tên NXB: ");
+		System.out.print("Nhập tên NXB: ");
 		String tenNXB = scanner.nextLine();
 
-		System.out.println("Nhập số bản phán hành: ");
+		System.out.print("Nhập số bản phán hành: ");
 		int soBanPhatHanh = scanner.nextInt();
 	}
 

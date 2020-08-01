@@ -1,5 +1,5 @@
 package Inheritance;
 
 public enum GioiTinh {
-	Nam,Nu,Khac;
+	Nam , Nu , Khac;
 }

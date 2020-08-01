@@ -13,7 +13,7 @@ public Bao(){
 	public void input() {
 		super.input();
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Nhập ngày phát hành: ");
+		System.out.print("Nhập ngày phát hành: ");
 		ngayPhatHanh = scanner.nextLine();
 	}
 	

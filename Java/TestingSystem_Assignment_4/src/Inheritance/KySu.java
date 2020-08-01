@@ -2,31 +2,21 @@ package Inheritance;
 
 import java.util.Scanner;
 
-public class KySu extends CanBo{
-	private String nganhDaoTao;
-	
-	public KySu(){
-		
-	}
+public class KySu extends CanBo {
 
-	public KySu(String nganhDaoTao) {
-		super();
-		this.nganhDaoTao = nganhDaoTao;
-	}
+	private String nganhDaoTao;
 
 	public String getNganhDaoTao() {
 		return nganhDaoTao;
 	}
 
-	public void setNganhDaoTao(String nganhDaoTao) {
-		this.nganhDaoTao = nganhDaoTao;
-	}
 	@Override
-	public void inputCanBo() {
-		super.inputCanBo();
+	public void input() {
+		super.input();
+
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("Nhập ngành đào tạo: ");
+		System.out.print("Nhập ngành đào tạo: ");
 		nganhDaoTao = scanner.nextLine();
 	}
 
@@ -36,3 +26,4 @@ public class KySu extends CanBo{
 		System.out.println("Ngành đào tạo  : " + nganhDaoTao);
 	}
 }
+

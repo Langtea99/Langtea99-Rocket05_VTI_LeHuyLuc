@@ -25,10 +25,10 @@ public TapChi(){
 
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("Nhập số phát hành: ");
+		System.out.print("Nhập số phát hành: ");
 		soPhatHanh = scanner.nextInt();
 
-		System.out.println("Nhập tháng phát hành: ");
+		System.out.print("Nhập tháng phát hành: ");
 		thangPhatHanh = scanner.nextByte();
 	}
 	public TapChi(int soPhatHanh, byte thangPhatHanh) {

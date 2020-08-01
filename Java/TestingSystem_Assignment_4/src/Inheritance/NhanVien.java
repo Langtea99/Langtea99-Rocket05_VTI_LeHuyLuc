@@ -2,32 +2,21 @@ package Inheritance;
 
 import java.util.Scanner;
 
-public class NhanVien extends CanBo{
-	private String congViec;
-	
-	public NhanVien(){
-		
-	}
+public class NhanVien extends CanBo {
 
-	public NhanVien(String congViec) {
-		super();
-		this.congViec = congViec;
-	}
+	private String congViec;
 
 	public String getCongViec() {
 		return congViec;
 	}
 
-	public void setCongViec(String congViec) {
-		this.congViec = congViec;
-	}
 	@Override
-	public void inputCanBo() {
-		super.inputCanBo();
+	public void input() {
+		super.input();
 
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("Nhập công việc: ");
+		System.out.print("Nhập công việc: ");
 		congViec = scanner.nextLine();
 	}
 
@@ -36,4 +25,5 @@ public class NhanVien extends CanBo{
 		super.getInfor();
 		System.out.println("Công việc  : " + getCongViec());
 	}
+
 }

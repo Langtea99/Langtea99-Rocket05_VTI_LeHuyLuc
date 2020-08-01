@@ -1,0 +1,16 @@
+package Inheritance;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class QLCB {
+
+	public static void main(String[] args) {
+		private ArrayList<CanBo> canBos;
+
+		public QLCB() {
+			canBos = new ArrayList<>();
+		}
+
+	}
+
+}

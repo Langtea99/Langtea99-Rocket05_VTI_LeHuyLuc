@@ -1,38 +1,21 @@
 package Inheritance;
-
 import java.util.Scanner;
 
-public class CongNhan extends CanBo{
-	private int bac;
+public class CongNhan extends CanBo {
+	private byte bac;
 
-	public CongNhan()
-	{
-		
-	}
-	public CongNhan(int bac) {
-		super();
-		this.bac = bac;
-	}
-	public int getBac() {
+	public byte getBac() {
 		return bac;
 	}
 
-	public void setBac(int bac) {
-		this.bac = bac;
-	}
 	@Override
-	public void inputCanBo() {
-		super.inputCanBo();
+	public void input() {
+		super.input();
 
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Nhập bậc của công nhân (1-10): ");
-		bac = scanner.nextByte();
-		
-		while(bac <0 & bac>10 )
-		{
-			System.out.print("Nhập sai!Nhập lại bậc của công nhân(1-10): ");
-			bac = scanner.nextByte();
-		}
+
+		System.out.print("Nhập bậc của công nhân: ");
+		byte bac = scanner.nextByte();
 	}
 
 	@Override
@@ -40,4 +23,5 @@ public class CongNhan extends CanBo{
 		super.getInfor();
 		System.out.println("Bậc  : " + bac);
 	}
+
 }

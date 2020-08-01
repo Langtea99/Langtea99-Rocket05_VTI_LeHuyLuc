@@ -1,0 +1,30 @@
+package Inheritance;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class QLCB {
+	private ArrayList<CanBo> canBos;
+	public QLCB() {
+		canBos = new ArrayList<CanBo>();
+	}
+	public void themCanBo(CanBo canBoMoi) {
+		canBos.add(canBoMoi);
+	}
+	public void inTatCaCanBo(){
+		for(int i=0;i<canBos.size();i++)
+		{
+			System.out.println(canBos.get(i));
+		}
+	}
+	public void timCanBo(String name){
+		for(int i=0;i<canBos.size();i++)
+		{
+			if(canBos.get(i).getHoTen()==name)
+			{
+			System.out.println(canBos.get(i));
+			}
+			else
+				System.out.println("No see!");	
+		}
+	}
+}

@@ -1,0 +1,23 @@
+package Inheritance;
+
+import java.util.Scanner;
+
+public class CongNhan extends CanBo{
+	public CongNhan(String hoTen, byte tuoi, GioiTinh gioiTinh, String diaChi,int bac) {
+		super(hoTen, tuoi, gioiTinh, diaChi);
+		this.bac =bac;
+	}
+	private byte bac;
+
+	public byte getBac() {
+		return bac;
+	}
+
+	public void setBac(byte bac) {
+		this.bac = bac;
+	}
+	public String toString()
+	{
+		return super.toString()+"Bac"+bac;
+	}
+}

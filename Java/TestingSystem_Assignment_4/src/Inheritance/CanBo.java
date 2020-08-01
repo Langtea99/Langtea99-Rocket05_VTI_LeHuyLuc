@@ -1,5 +1,4 @@
 package Inheritance;
-
 import java.util.Scanner;
 
 public class CanBo {
@@ -8,18 +7,17 @@ public class CanBo {
 	private GioiTinh gioiTinh;
 	private String diaChi;
 	
-	public CanBo() 
-	{
+	public CanBo() {
+		
 	}
-
-	public CanBo(String hoTen, byte tuoi, GioiTinh gioiTinh, String diaChi) {
+	
+	public CanBo(String hoTen, byte tuoi, GioiTinh gioiTinh,String diaChi) {
 		super();
 		this.hoTen = hoTen;
 		this.tuoi = tuoi;
 		this.gioiTinh = gioiTinh;
 		this.diaChi = diaChi;
 	}
-
 	public String getHoTen() {
 		return hoTen;
 	}
@@ -42,11 +40,11 @@ public class CanBo {
 
 	public void setGioiTinh(int gioiTinh) {
 		if (gioiTinh == 0) {
-			this.gioiTinh = GioiTinh.valueOf("MALE");
+			this.gioiTinh = GioiTinh.valueOf("Nam");
 		} else if (gioiTinh == 1) {
-			this.gioiTinh = GioiTinh.valueOf("FEMALE");
+			this.gioiTinh = GioiTinh.valueOf("Nu");
 		} else {
-			this.gioiTinh = GioiTinh.valueOf("UNKNOWN");
+			this.gioiTinh = GioiTinh.valueOf("Khac");
 		}
 	}
 
@@ -57,7 +55,7 @@ public class CanBo {
 	public void setDiaChi(String diaChi) {
 		this.diaChi = diaChi;
 	}
-	public void inputCanBo() {
+	public void input() {
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("Nhập họ tên: ");
@@ -68,21 +66,15 @@ public class CanBo {
 
 		System.out.print("Nhập giới tính (0:Nam, 1:Nữ, khác: Unknown): ");
 		setGioiTinh(scanner.nextInt());
-
+		
 		System.out.print("Nhập địa chỉ: ");
 		String diaChi = scanner.nextLine();
-	}
 
+	}
 	public void getInfor() {
 		System.out.println("Họ tên      : " + hoTen);
 		System.out.println("Tuổi        : " + tuoi);
 		System.out.println("Giới tính   : " + gioiTinh);
 		System.out.println("Địa chỉ     : " + diaChi);
-	}
-
-	@Override
-	public String toString() {
-		return "CanBo{" + " Hoten: " + hoTen + '\'' + ", Tuoi: " + tuoi + ", Gioi tinh: " + gioiTinh + ", Dia Chi='" + diaChi
-				+ '\'' + '}';
 	}
 }
