@@ -69,7 +69,6 @@ public class CanBo {
 		
 		System.out.print("Nhập địa chỉ: ");
 		String diaChi = scanner.nextLine();
-		
 
 	}
 	public void getInfor() {
