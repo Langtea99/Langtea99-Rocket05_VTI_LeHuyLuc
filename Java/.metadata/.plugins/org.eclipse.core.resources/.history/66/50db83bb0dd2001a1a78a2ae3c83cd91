@@ -1,9 +1,0 @@
-package Inheritance;
-
-public class CanBo {
-	private String hoTen;
-	private byte tuoi;
-	private GioiTinh gioiTinh;
-	private String diaChi;
-
-}

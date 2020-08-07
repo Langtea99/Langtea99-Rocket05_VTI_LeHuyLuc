@@ -1,0 +1,9 @@
+package Abstraction;
+
+public interface ITTuyenSinh {
+	void themThiSinh();
+
+	void hienThiSinh();
+
+	void timThiSinh();
+}

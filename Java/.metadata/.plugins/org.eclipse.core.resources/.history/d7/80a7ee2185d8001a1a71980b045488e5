@@ -1,0 +1,10 @@
+package Polymorphism;
+
+public abstract class DienThoaiDiDong implements ITanCong{
+
+	@Override
+	public void vuKhi() {
+		
+	}
+	
+}

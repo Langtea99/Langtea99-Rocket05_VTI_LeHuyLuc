@@ -1,0 +1,30 @@
+package Abstraction;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TuyenSinh implements ITTuyenSinh{
+	private List<TuyenSinh> tuyenSinhs;
+	public TuyenSinh() {
+		tuyenSinhs = new ArrayList<>();
+	}
+
+	@Override
+	public void themThiSinh() {
+		
+		
+	}
+
+	@Override
+	public void hienThiSinh() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void timThiSinh() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

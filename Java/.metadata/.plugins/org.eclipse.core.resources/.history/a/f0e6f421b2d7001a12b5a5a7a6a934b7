@@ -1,0 +1,10 @@
+package lesson7_writeObject;
+
+public class WriteObjectDemo {
+
+	public static void main(String[] args) {
+		Person p = new Person ("Luc");
+
+	}
+
+}

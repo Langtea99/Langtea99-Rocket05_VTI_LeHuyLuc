@@ -1,0 +1,7 @@
+package Polymorphism;
+
+public class DienThoaiThongMinh extends DienThoaiDiDong{
+	public void suDung3G(){
+		
+	}
+}

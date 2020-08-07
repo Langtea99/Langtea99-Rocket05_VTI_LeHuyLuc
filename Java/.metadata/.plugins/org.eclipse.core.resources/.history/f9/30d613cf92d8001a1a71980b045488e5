@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Person {
+	private int age;
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public static int inputAge() {
+		while (true) {
+			Scanner scanner = new Scanner(System.in);
+			int age = scanner.nextInt();
+
+			if (age <= 0) {
+				System.out.println("Wrong inputing! The age must be greater than 0, please input again.");
+
+			} else {
+				return age;
+			}
+		}
+	}
+	}
+}

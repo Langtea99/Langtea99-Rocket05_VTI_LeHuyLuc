@@ -1,0 +1,13 @@
+package lesson7_writeObject;
+
+import java.io.InputStream;
+
+public class WriteObjectDemo {
+
+	public static void main(String[] args) {
+		Person p = new Person ("Luc");
+		InputStream oi = new ObjectInputStream(in);
+
+	}
+
+}

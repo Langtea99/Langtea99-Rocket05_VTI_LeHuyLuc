@@ -1,0 +1,8 @@
+package Abstraction;
+
+public class ThiSinh {
+	private int soBaoDanh;
+	private String hoTen;
+	private String diaChi;
+	private String mucDoUuTien;
+}

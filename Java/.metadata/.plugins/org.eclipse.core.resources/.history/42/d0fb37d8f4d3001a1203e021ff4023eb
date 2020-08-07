@@ -1,0 +1,13 @@
+package Abstraction;
+
+import java.util.ArrayList;
+
+public class TuyenSinh implements ITuyenSinh{
+	private ArrayList<ThiSinh>  thiSinhs;
+	@Override
+	public void themMoiThiSinh(ThiSinh thiSinhMoi) {
+		
+		
+	}
+
+}

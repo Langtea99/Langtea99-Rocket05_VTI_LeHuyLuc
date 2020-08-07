@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Person {
+	private static Scanner scanner = new Scanner(System.in);
+	private int age;
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public static int inputAge()throws Exception{
+		try{
+		System.out.print("Nhap vao tuoi :");
+		int age = scanner.nextInt();
+		checkAge(age);
+		return age;
+		}catch(Exception e){
+		throw new Exception("Wrong inputing! Please input an age as int, inputagain.");
+		}
+	}
+	public static void checkAge(int age) throws InvalidAgeException{
+		if(age<0){
+			throw new InvalidAgeException("Wrong inputing! The age must be greaterthan 0, please input again.");
+		}
+	}
+	}

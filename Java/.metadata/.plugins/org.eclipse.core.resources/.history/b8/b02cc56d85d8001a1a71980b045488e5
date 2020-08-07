@@ -1,0 +1,25 @@
+package Polymorphism;
+
+public abstract class DienThoaiDiDong implements ITanCong{
+	
+	public void ngheDienThoai() {
+		
+	}
+
+	public void goiDienThoai() {
+		
+	}
+
+	public void guiTinNhan() {
+		
+	}
+
+	public void nhanTinNhan() {
+		
+	}
+	@Override
+	public void vuKhi() {
+		
+	}
+	
+}

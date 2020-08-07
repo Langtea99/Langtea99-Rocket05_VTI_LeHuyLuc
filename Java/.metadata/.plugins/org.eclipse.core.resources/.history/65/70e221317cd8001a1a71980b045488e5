@@ -1,0 +1,28 @@
+package Abstraction;
+
+public class Main implements ITTuyenSinh{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void themThiSinh() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void hienThiSinh() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void timThiSinh() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package Abstraction;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	private static void loadMenu() {
+		System.out.println("===============MENU=================");
+		System.out.println("======1. Thêm mới thí sinh  ========");
+		System.out.println("======2. Hiện thông tin thí sinh ===");
+		System.out.println("======3. Tìm kiếm theo số báo danh==");
+		System.out.println("======4.Thoát                      =");
+		System.out.println("====================================");
+		System.out.println("===           Bạn chọn:             ");
+	}
+}
