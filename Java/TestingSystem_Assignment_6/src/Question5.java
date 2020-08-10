@@ -13,6 +13,6 @@ public class Question5 {
 				System.out.println("Wrong inputing! The age must be greaterthan 0, please input again.");
 				}catch(Exception e){
 				System.out.println("Wrong inputing! Please input an age as int, inputagain.");
-		}	
+		}
 	}
 }

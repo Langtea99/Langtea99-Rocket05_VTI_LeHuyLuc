@@ -1,0 +1,12 @@
+package Exercise_1_Collection;
+
+import java.util.Stack;
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class Question2 {
+
+	public static void main(String[] args) {
+	
+	}
+}

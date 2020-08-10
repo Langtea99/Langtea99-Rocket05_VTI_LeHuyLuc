@@ -1,0 +1,17 @@
+package Static;
+
+public class HinhHoc implements IHinhHoc{
+
+	@Override
+	public void chuVi(float a, float b) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void dienTich(float a, float b) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

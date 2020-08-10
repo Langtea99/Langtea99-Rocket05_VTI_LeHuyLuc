@@ -1,0 +1,29 @@
+package Exercise_1_Collection;
+
+import java.util.Stack;
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class Question2 {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Thứ tự student đến phỏng vấn từ sớm nhất đến muộn nhất: ");
+		stackPop();
+	}
+
+	private static void stackPop() {
+		Stack<Student> students = new Stack<>();
+		students.push(new Student("Nguyễn Văn A"));
+		students.push(new Student("Trần Văn Nam"));
+		students.push(new Student("Nguyễn Văn Huyên"));
+		students.push(new Student("Nguyễn Văn Nam"));
+
+		
+		System.out.println(students.pop().in());
+		System.out.println(students.pop());
+		System.out.println(students.pop());
+		System.out.println(students.pop());
+	}
+
+}

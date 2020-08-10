@@ -1,8 +1,0 @@
-package Abstraction;
-
-public class ThiSinh {
-	private String soBaoDanh;
-	private String hoTen;
-	private String diaChi;
-	private String mucDoUuTien;
-}

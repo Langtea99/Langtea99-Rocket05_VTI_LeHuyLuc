@@ -1,5 +1,0 @@
-package Abstraction;
-
-public interface ITuyenSinh {
-	pubic void themMoiThiSinh(ThiSinh thiSinhMoi);
-}

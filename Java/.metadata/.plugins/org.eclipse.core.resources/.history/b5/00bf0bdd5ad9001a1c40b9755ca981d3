@@ -1,0 +1,13 @@
+package Exercise_1_Collection;
+
+import java.util.ArrayList;
+
+public class Student {
+	private ArrayList<Student> students;
+	public Student(){
+		students = new ArrayList<>();
+	}
+	public Student(String student) {
+		students = new ArrayList<>();
+	} 
+}

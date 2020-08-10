@@ -1,0 +1,15 @@
+package Exercise_3_Generic;
+
+import java.util.Date;
+
+import Exercise_2_Comparing.Student;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Question_2 q2 = new Question_2();
+		q2.print(new Student(2,"Le Huy Luc",new Date("2020/08/08"),8.0f);
+
+	}
+
+}
