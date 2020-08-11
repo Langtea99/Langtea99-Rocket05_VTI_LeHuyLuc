@@ -1,0 +1,17 @@
+package backend;
+
+import entity.CPU;
+
+public class Exercise3 {
+	
+	public void question1() {
+		CPU cpu = new CPU(100);
+		CPU.Ram ram = cpu.new Ram(8, "Acer");
+		CPU.Processor processor = cpu.new Processor(4, "Asus");
+		System.out.println(ram.getClockSpeed());
+		System.out.println(processor.getCache());
+		}
+	public void question2(){
+		
+	}
+}

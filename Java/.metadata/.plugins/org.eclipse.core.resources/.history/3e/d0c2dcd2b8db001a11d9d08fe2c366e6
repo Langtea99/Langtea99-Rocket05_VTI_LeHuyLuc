@@ -1,0 +1,14 @@
+import OuterClass.InnerClass;
+
+public class Main {
+
+	public static void main(String[] args) {
+		OuterClass outerClass = new OuterClass();
+		outerClass.show();
+		
+		InnerClass innerClass = outerClass.new InnerClass();
+		innerClass.show();
+
+	}
+
+}

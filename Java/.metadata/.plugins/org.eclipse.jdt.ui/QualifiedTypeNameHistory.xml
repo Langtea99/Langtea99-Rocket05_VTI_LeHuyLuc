@@ -17,9 +17,17 @@
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Stack"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="backend.Exercise2"/>
+<fullyQualifiedTypeName name="entity.CPU.Processor"/>
+<fullyQualifiedTypeName name="entity.CPU"/>
+<fullyQualifiedTypeName name="backend.Exercise3"/>
+<fullyQualifiedTypeName name="entity.Car"/>
+<fullyQualifiedTypeName name="entity.Car.Engine"/>
+<fullyQualifiedTypeName name="OuterClass.InnerClass"/>
+<fullyQualifiedTypeName name="NgayThangNam.GioPhutGiay"/>
 </qualifiedTypeNameHistroy>

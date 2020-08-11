@@ -1,0 +1,81 @@
+package entity;
+
+public class CPU {
+	public class Ram {
+
+	}
+
+	private float price;
+
+	public CPU(int i) {
+		
+	}
+
+	public float getPrice() {
+		return price;
+	}
+
+	public void setPrice(float price) {
+		this.price = price;
+	}
+	
+	public class Processor{
+		
+		private int coreAmount;
+		private String menufacturer;
+		
+		public int getCoreAmount() {
+			return coreAmount;
+		}
+		public void setCoreAmount(int coreAmount) {
+			this.coreAmount = coreAmount;
+		}
+		public String getMenufacturer() {
+			return menufacturer;
+		}
+		public void setMenufacturer(String menufacturer) {
+			this.menufacturer = menufacturer;
+		}
+		public Processor(int coreAmount, String menufacturer) {
+			super();
+			this.coreAmount = coreAmount;
+			this.menufacturer = menufacturer;
+		}
+		
+		public float getCache() {
+			return (float) 4.3;
+		}
+		
+		public class Ram{
+			private int memory;
+			private String manufacturer;
+			
+			public Ram(int memory, String menufacturer) {
+				super();
+				this.memory = memory;
+				this.manufacturer = menufacturer;
+			}
+
+			public int getMemory() {
+				return memory;
+			}
+
+			public void setMemory(int memory) {
+				this.memory = memory;
+			}
+
+			public String getMenufacturer() {
+				return menufacturer;
+			}
+
+			public void setMenufacturer(String menufacturer) {
+				this.manufacturer = menufacturer;
+			}
+			
+			public float getCache() {
+				return (float) 4.3;
+			}
+		}
+	}
+}
+

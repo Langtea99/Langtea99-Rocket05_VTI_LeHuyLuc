@@ -1,0 +1,14 @@
+package frontend;
+
+import java.util.Date;
+
+import backend.Exercise2;
+
+public class Program2 {
+
+	public static void main(String[] args) {
+		Date date = new Date("2020/08/08");
+
+	}
+
+}

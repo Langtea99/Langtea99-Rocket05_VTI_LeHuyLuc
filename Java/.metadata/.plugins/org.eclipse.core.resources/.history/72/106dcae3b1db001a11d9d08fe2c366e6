@@ -1,0 +1,10 @@
+package backend;
+
+import entity.CPU;
+
+public class Exercise3 {
+	
+	public void question1(){
+		CPU.Processor processor = cpu.new Processor(10,"Broke");
+	}
+}
