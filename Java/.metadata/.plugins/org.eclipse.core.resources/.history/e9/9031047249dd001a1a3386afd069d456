@@ -1,0 +1,14 @@
+package frontend;
+
+public class Program1 {
+
+	public static void main(String[] args) {
+		
+		Basic program = new Basic();
+
+		// Question 1:
+		program.connect();
+
+	}
+
+}

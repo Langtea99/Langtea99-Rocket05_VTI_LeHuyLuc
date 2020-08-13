@@ -1,0 +1,62 @@
+package abc;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Main {
+
+	public static void main(String[] args) throws SQLException {
+		String dbUrl = "jdbc:mysql://localhost:3306/jdbcdemo";
+		String username = "root";
+		String password = "999184";
+		
+		Connection con = DriverManager.getConnection(dbUrl, username, password);		
+		Statement statement = con.createStatement();
+		
+//		String query1 = "Insert into person values('Luc',20)" ;
+//		statement.executeUpdate(query1);
+//		String query2 = "select*from person";
+//		statement.executeQuery(query2);
+//		ResultSet hung1 = statement.executeQuery(query2);
+//		
+//		while(hung1.next()){
+//		System.out.println(hung1.getString(1)+" "+hung1.getInt(2));
+//		}
+//		
+//		String query3 = "Select age,name from person";
+//		ResultSet hung3 = statement.executeQuery(query3);
+//		while(hung3.next()){
+//			System.out.println(hung3.getInt("age"));
+//			}
+//		
+//		String query4 = "Select `name` from person where `age` = ?";
+//		PreparedStatement preparedstatement = con.prepareStatement(query4);
+//		preparedstatement.setInt(1,20);
+//		ResultSet hung4 = preparedstatement.executeQuery();
+//		while(hung4.next()){
+//			System.out.println(hung4.getString("name"));
+//			}
+		//con.close();
+//		updateAgeByName("Luc",20,con);
+//		String query6 = "call `update`(?,?)";
+//		CallableStatement callable = con.prepareCall(query6);
+//		callable.setInt(1, 20);
+//		callable.setString(2,"Minh");
+//		int hung6 = callable.executeUpdate();
+	}
+	//update age by name
+//	public static void updateAgeByName(String name,int age,Connection con) throws SQLException{
+//		String query5 = "Update person set age = ? where name =? ";
+//		PreparedStatement preparedstatement = con.prepareStatement(query5);
+//		preparedstatement.setInt(1,age);
+//		preparedstatement.setString(2,name);
+//		int numberOfUpdateDrow = preparedstatement.executeUpdate();
+//		System.out.println(numberOfUpdateDrow);
+//		
+//	}
+}

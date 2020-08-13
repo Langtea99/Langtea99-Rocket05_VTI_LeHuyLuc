@@ -1,0 +1,21 @@
+package backend;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
+
+public class DepartmentDao {
+	public void conect()throws FileNotFoundException, IOException, SQLException, ClassNotFoundException{
+		Properties properties = new Properties();
+		
+		String dbUrl = properties.getProperty("dbUrl");
+		String username = properties.getProperty("username");
+		String password = properties.getProperty("password");
+		
+		Connection connection = DriverManager.getConnection(dbUrl, username, password);		
+		System.out.println("Connect success!");
+	}
+}

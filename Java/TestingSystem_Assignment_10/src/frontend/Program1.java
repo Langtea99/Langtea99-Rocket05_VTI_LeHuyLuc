@@ -1,0 +1,18 @@
+package frontend;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.SQLException;
+
+import backend.Basic;
+
+public class Program1 {
+
+	public static void main(String[] args) throws FileNotFoundException, IOException, SQLException, ClassNotFoundException {
+		
+		Basic program = new Basic();
+		program.question1();
+		program.question2();
+	}
+
+}

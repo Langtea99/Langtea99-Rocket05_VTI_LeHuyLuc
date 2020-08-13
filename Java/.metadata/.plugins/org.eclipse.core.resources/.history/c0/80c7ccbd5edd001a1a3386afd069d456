@@ -1,0 +1,27 @@
+package backend;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import entity.JdbcUtils;
+import entity.MessageProperties;
+
+
+public class Ex5 {
+	private JdbcUtils jdbcUtils;
+
+	private MessageProperties messagePoperties;
+	
+	public Ex5() throws IOException, SQLException, ClassNotFoundException {
+		jdbcUtils = new JdbcUtils();
+
+		messagePoperties = new MessageProperties();
+	}
+
+}
