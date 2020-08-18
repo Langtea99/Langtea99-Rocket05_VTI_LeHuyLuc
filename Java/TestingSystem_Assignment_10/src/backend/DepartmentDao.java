@@ -15,17 +15,17 @@ import java.util.Properties;
 import entity.Department;
 
 public class DepartmentDao {
-	public void conect()throws FileNotFoundException, IOException, SQLException, ClassNotFoundException{
-		Properties properties = new Properties();
-		properties.load(new FileInputStream("src/config.properties"));
-		
-		String dbUrl = properties.getProperty("dbUrl");
-		String username = properties.getProperty("username");
-		String password = properties.getProperty("password");
-		
-		Connection connection = DriverManager.getConnection(dbUrl, username, password);		
-		System.out.println("Connect success!");
-	}
+//	public void conect()throws FileNotFoundException, IOException, SQLException, ClassNotFoundException{
+//		Properties properties = new Properties();
+//		properties.load(new FileInputStream("src/config.properties"));
+//		
+//		String dbUrl = properties.getProperty("dbUrl");
+//		String username = properties.getProperty("username");
+//		String password = properties.getProperty("password");
+//		
+//		Connection connection = DriverManager.getConnection(dbUrl, username, password);		
+//		System.out.println("Connect success!");
+//	}
 	public DepartmentDao() throws IOException, SQLException, ClassNotFoundException {
 		
 

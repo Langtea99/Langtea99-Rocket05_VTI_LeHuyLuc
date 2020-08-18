@@ -1,0 +1,6 @@
+package com.vti.lesstion11.entity;
+
+public class Account {
+	private String username;
+	private String email;
+}

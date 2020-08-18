@@ -1,0 +1,14 @@
+package TestFinal;
+
+public class TruongPhong extends NhanVien {
+	
+	@Override
+	public void input(){
+		super.input();
+	}
+	
+	@Override
+	public void getInfor() {
+		super.getInfor();
+	}
+}

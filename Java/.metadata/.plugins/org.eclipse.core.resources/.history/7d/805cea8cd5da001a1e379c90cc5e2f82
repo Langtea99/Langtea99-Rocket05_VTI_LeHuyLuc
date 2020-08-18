@@ -1,7 +1,0 @@
-package Exercise_3_Generic;
-
-public class Question_2 {
-	public <T> void print(T a){
-		System.out.println(a);
-	}
-}

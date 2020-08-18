@@ -1,6 +1,0 @@
-package entity;
-
-public class Car {
-	private String name;
-	private String type;
-}

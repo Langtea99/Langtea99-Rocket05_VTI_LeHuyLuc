@@ -1,0 +1,47 @@
+package TestFinal;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class TruongPhong extends NhanVien {
+	
+	@Override
+	public void input(){
+		super.input();
+	}
+	
+	@Override
+	public void getInfor(int nam, int gender) {
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy");
+		String	date1 = simpleDateFormat.format(ngayBatDau);
+		String	date2 = simpleDateFormat.format(nam);
+		Date d1 = null;
+		Date d2 = null;
+		int nghiThaiSan;
+		int nghiCuoi = 7;
+		int soNgayNghi = 0;
+		try {
+			d1 = simpleDateFormat.parse(date1);
+			d2 = simpleDateFormat.parse(date2);
+
+			long diff = d2.getTime() - d1.getTime();
+			long diffDays = diff / (24 * 60 * 60 * 1000);
+
+			if(diffDays>10){
+				diffDays = diffDays +12;
+			}else{
+				diffDays = 12;
+			}
+			if(gender == 1){
+				nghiThaiSan = 7;
+			}
+			else{
+				nghiThaiSan = 180;
+			}
+				soNgayNghi = (int) (diffDays + nghiThaiSan + nghiCuoi) ;
+			} catch (Exception e) {
+			e.printStackTrace();
+			}
+		System.out.println("So ngay nghi    : " + soNgayNghi+2);
+}
+}

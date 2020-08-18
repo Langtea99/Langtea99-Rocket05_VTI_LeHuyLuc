@@ -1,51 +1,39 @@
 package backend;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-
-import entity.Department;
-import entity.JdbcUtils;
-import entity.MessageProperties;
-
 
 public class Ex5 {
-	private JdbcUtils jdbcUtils;
-
-	private MessageProperties messagePoperties;
+	private static final String dbUrl = "jdbc:mysql://localhost:3306/testingsystem";
+	private static final String username = "root";
+	private static final String pass = "123456";
+	private static Connection myConn;
+	private static boolean isConnect = false;
 	
-	public Ex5() throws IOException, SQLException, ClassNotFoundException {
-		jdbcUtils = new JdbcUtils();
-
-		messagePoperties = new MessageProperties();
+	public static boolean isConnectedForTesting() throws SQLException {
+		boolean test = false;
+		
+		DriverManager.getConnection(dbUrl, username, pass);
+		System.out.println("Connect success!");
+		test = true;
+		
+		return test;
 	}
-	public List<Department> getDepartments()
-			throws FileNotFoundException, ClassNotFoundException, IOException, SQLException {
-
-		List<Department> departments = new ArrayList<>();
-
-		Connection connection = jdbcUtils.connect();
-
-		Statement statement = connection.createStatement();
-
-		String sql = "SELECT * FROM Department";
-		ResultSet resultSet = statement.executeQuery(sql);
-
-		while (resultSet.next()) {
-			Department department = new Department();
-			department.setId(resultSet.getInt("DepartmentId"));
-			department.setName(resultSet.getString("DepartmentName"));
-
-			departments.add(department);
+	
+	public static Connection connect() throws SQLException {
+		if (!isConnect) {
+			isConnect = true;
+			myConn = DriverManager.getConnection(dbUrl, username, pass);
 		}
-		jdbcUtils.disconnect();
-
-		return departments;
+		
+		return myConn;
 	}
-
+	
+	public void disconnect() throws SQLException {
+		if(!myConn.isClosed()) {
+			isConnect = false;
+			myConn.close();
+		}
+	}
 }

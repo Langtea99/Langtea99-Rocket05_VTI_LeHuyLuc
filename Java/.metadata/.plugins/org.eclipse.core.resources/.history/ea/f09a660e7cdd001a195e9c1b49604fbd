@@ -1,0 +1,14 @@
+package com.vti.lesstion11.backend.businesslayer;
+
+import java.util.List;
+
+import com.vti.lesstion11.backend.datalayer.AccountRepository;
+import com.vti.lesstion11.entity.Account;
+
+public class AccountService {
+	private AccountRepository accountRepository;
+	public List<Account> getListAccounts(){
+		
+		return null;		
+	}
+}

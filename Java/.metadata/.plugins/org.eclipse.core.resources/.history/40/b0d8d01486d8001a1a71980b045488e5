@@ -1,9 +1,0 @@
-package Polymorphism;
-
-public class DienThoaiCoDien extends DienThoaiDiDong{
-	
-	public void ngheRadio(){
-		
-	}
-
-}

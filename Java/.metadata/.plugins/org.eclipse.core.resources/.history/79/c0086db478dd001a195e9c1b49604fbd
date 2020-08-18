@@ -1,0 +1,22 @@
+package com.vti.lesstion11.backend.datalayer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.vti.lesstion11.entity.Account;
+import com.vti.lesstion11.utils.JDBCUtils;
+
+public class AccountRepository {
+	private JDBCUtils jdbcUtils;
+	
+	public AccountRepository(){
+		jdbcUtils = new JDBCUtils();
+	}
+	
+	public List<Account> getListAccounts(){
+		List<Account> accounts = new ArrayList<>();
+		
+		return null;		
+	}
+	
+}

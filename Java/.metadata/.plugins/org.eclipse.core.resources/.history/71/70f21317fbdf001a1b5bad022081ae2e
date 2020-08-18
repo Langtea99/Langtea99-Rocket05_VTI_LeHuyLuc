@@ -1,0 +1,7 @@
+package TestFinal;
+
+import java.util.ArrayList;
+
+public class QLNV {
+	private ArrayList<NhanVien> nhanViens;
+}

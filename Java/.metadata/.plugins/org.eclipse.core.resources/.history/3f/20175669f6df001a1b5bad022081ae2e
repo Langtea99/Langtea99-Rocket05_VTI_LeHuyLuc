@@ -1,0 +1,16 @@
+package TestFinal;
+
+public class TruongPhong extends NhanVien {
+	
+	@Override
+	public void input(){
+		super.input();
+	}
+	
+	@Override
+	public void getInfor() {
+		super.getInfor();
+		super.cheDoNghiPhep(nam, gender);
+		System.out.println("So ngay nghi  : " + soNgayNghi + 2);
+	}
+}

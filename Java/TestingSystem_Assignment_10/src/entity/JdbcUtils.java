@@ -9,32 +9,20 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class JdbcUtils {
-	private Properties properties;
+	private static final String dbUrl = "jdbc:mysql://localhost:3306/javademo";
+	private static final String username = "root";
+	private static final String password = "999184";
 	private Connection connection;
 	
-	public void isconnectForTesting()
+	public boolean isconnectForTesting()
 			throws FileNotFoundException, IOException, ClassNotFoundException, SQLException, SQLException {
-		properties = new Properties();
-		properties.load(new FileInputStream("src/config.properties"));
-		
-		String dbUrl = properties.getProperty("dbUrl");
-		String username = properties.getProperty("username");
-		String password = properties.getProperty("password");
-
-		Class.forName(properties.getProperty("driver"));
-		connection = DriverManager.getConnection(dbUrl, username, password);
-
-		System.out.println("Connect success!");
+		boolean test = true;
+		DriverManager.getConnection(dbUrl, username, password);
+		test = true;
+		return test;
 	}
 	
-	public Connection connect()
-			throws FileNotFoundException, IOException, ClassNotFoundException, SQLException, SQLException {
-		properties = new Properties();
-		properties.load(new FileInputStream("src/config.properties"));
-		
-		String dbUrl = properties.getProperty("dbUrl");
-		String username = properties.getProperty("username");
-		String password = properties.getProperty("password");
+	public Connection connect() throws SQLException{
 		
 		Connection connection = DriverManager.getConnection(dbUrl, username, password);	
 		return connection;

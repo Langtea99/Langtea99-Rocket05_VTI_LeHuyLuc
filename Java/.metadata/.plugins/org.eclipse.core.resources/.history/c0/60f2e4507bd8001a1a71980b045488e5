@@ -1,6 +1,0 @@
-package Abstraction;
-
-public class Khoi {
-	private String ten;
-	private String monThi;
-}

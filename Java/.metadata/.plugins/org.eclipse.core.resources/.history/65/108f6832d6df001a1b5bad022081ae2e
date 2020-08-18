@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Nhap vao he so a :");
+		float a = scanner.nextFloat();
+		System.out.print("Nhap vao he so a :");
+		float b = scanner.nextFloat();
+		System.out.print("Nhap vao he so a :");
+		float c = scanner.nextFloat();
+		
+		giaiPTBac2(a, b, c);
+	}
+	private static void giaiPTBac2(float a, float b, float c) {
+		// Ktra cac he so
+		if(a == 0){
+			if(b == 0){
+				System.out.println("Phuong trinh vo nghiem !");
+			}else{
+				System.out.println("Phuong trinh co nghiem la : x = " + (-c / b) );
+			}
+		}
+	}
+
+}

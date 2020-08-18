@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Nhap vao he so a :");
+		float a = scanner.nextFloat();
+		System.out.print("Nhap vao he so a :");
+		float b = scanner.nextFloat();
+		System.out.print("Nhap vao he so a :");
+		float c = scanner.nextFloat();
+
+	}
+
+}

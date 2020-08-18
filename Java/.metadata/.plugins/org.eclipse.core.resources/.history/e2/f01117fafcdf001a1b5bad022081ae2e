@@ -1,0 +1,41 @@
+package TestFinal;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import Inheritance.CanBo;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ArrayList<NhanVien> nhanViens  = new ArrayList<>();
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Nhập số nhân viên muốn nhập:  ");
+		int n = scanner.nextInt();
+		NhanVien nhanVien = new NhanVien();
+		for (int i = 0; i < n; i++) {
+			System.out.print("Bạn muốn nhập cán bộ nào? (1:Trưởng phòng || 2: Phó phòng || 3: Nhân Viên): ");
+			byte chooses = scanner.nextByte();
+
+			switch (chooses) {
+			case 1:
+				nhanVien = new TruongPhong();
+				break;
+			case 2:
+				nhanVien = new PhoPhong();
+				break;
+			default:
+				System.out.println("Nhập sai !");
+				i--;
+				break;
+			}
+
+			nhanVien.input();
+			nhanViens.add(nhanVien);
+		}
+		for (NhanVien nhanvien : nhanViens) {
+			nhanvien.getInfor("2020", 1);
+		}
+	}
+}

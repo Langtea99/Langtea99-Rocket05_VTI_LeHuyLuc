@@ -1,0 +1,5 @@
+package Question3.Backend.Businesslayer;
+
+public interface IUserService {
+
+}

@@ -1,0 +1,28 @@
+package Question3.Backend.Datalayer;
+
+import java.sql.SQLException;
+
+import Question3.Backend.Businesslayer.IUserService;
+
+public class UserReponsitory implements IUserService{
+
+	@Override
+	public boolean isUserExists(String username) throws SQLException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public double getTotalPriceOfUserType(String username, int type) throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void insertHistoryTransaction(String fullname, int type, double amout, String createDate)
+			throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
