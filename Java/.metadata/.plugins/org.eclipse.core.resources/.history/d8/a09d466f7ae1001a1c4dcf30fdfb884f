@@ -1,0 +1,64 @@
+package Quesion.Backend.Bussinesslayer;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import Quesion.Backend.Datalayer.UserReponsitory;
+import Quesion.Entity.User;
+import Utils.ScannerUtils;
+
+public class UserService implements IUserService{
+	private UserReponsitory userReponsitory;
+	
+	public UserService() {
+		userReponsitory = new UserReponsitory();
+	}
+	
+	public boolean chuanHoaEmail(String email) {
+		String standardized = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+		String e = email;
+		boolean check = e.matches(standardized);
+		return check;
+	}
+	
+	public boolean checkPassword(String passwork) {
+		boolean check = false;		
+		for (int i =0; i<passwork.length(); i++) {
+			if(Character.isUpperCase(passwork.charAt(i))&& passwork.length()>5 && passwork.length()<13){
+				check = true;
+			}
+		}
+		return check;
+	}
+
+	@Override
+	public void registerManager(String firstName, String lastName, String phone, String email, String password,int expInYear) throws SQLException {
+		String p = phone;
+		String e = email;
+		int exp = expInYear;
+		String pass = password;
+		boolean check = false;
+		while(!check) {
+			if (p.length() >= 9 && p.length() <= 12) {
+				check = true;
+			}
+			else {
+				p = ScannerUtils.inputString("So dien thoai nhap chua dung dinh dang(9-12 so). Nhap lai:");
+			}
+		}
+	}
+
+	@Override
+	public void registerEmployee(String firstName, String lastName, String phone, String email, String password,String projectName, String proSkill) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isUserExists(String email, String password) throws SQLException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+}
+

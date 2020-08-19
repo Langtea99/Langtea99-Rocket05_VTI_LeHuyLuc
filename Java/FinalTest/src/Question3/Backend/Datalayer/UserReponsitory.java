@@ -77,7 +77,7 @@ public class UserReponsitory implements IUserService{
 			if (typee == 0)
 				System.out.println("Loại tiền rút:          Tiền gửi");
 			else if (typee == 1)
-				System.out.println("Loại tiền rút:          Tiền tiết kiệm");
+			System.out.println("Loại tiền rút:          Tiền tiết kiệm");
 			System.out.println("Số tiền rút:            " + ScannerUtils.convertDoubleToMoneyVND(set.getDouble("amount")));
 			System.out.println("Bắt đầu giao dịch:      " + set.getDate("create_at") +" "+ set.getTime("create_at"));
 			System.out.println("Hoàn thành giao dịch:   " + set.getDate("updated_at") +" "+ set.getTime("updated_at"));

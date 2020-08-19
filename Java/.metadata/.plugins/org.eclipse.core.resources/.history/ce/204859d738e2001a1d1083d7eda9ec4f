@@ -1,0 +1,25 @@
+package com.vti.lesstion11.backend.presentationlayer;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.vti.lesstion11.backend.businesslayer.AccountService;
+import com.vti.lesstion11.backend.datalayer.AccountRepository;
+import com.vti.lesstion11.entity.Account;
+
+public class AccountController {
+	private AccountService accountService;
+	public AccountController(){
+		accountService = new AccountService();
+	}
+	public List<Account> getListAccounts() throws SQLException{
+		return accountService.getListAccounts();		
+	}
+	public void updateEmailByUserName(String userName) {
+		accountService.updateEmailByUserName(userName);
+	}
+	public void updateEmailByUserName(String userName, String email) {
+		accountService.updateEmailByUserName(userName,email);
+		
+	}
+}

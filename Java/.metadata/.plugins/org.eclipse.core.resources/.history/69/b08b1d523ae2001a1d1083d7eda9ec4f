@@ -1,0 +1,5 @@
+package com.vti.lesstion11.backend.datalayer;
+
+public interface IAccountRepository {
+
+}

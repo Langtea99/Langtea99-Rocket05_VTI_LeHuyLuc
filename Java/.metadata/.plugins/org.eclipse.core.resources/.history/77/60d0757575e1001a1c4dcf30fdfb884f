@@ -1,0 +1,25 @@
+package Quesion.Backend.Bussinesslayer;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import Quesion.Backend.Datalayer.UserReponsitory;
+import Quesion.Entity.User;
+
+public class UserService implements IUserService{
+	private UserReponsitory userReponsitory;
+	
+	public UserService() {
+		userReponsitory = new UserReponsitory();
+	}
+	public List<User> getListAccounts() throws SQLException{
+		return userReponsitory.getListAccounts();		
+	}
+	@Override
+	public boolean isUserExists(String email,String password) throws SQLException {
+		return userReponsitory.isUserExists(email,password);
+	}
+
+
+}
+

@@ -1,0 +1,14 @@
+
+public class Main1 {
+static int a;
+int b;
+public Main1() {
+int c;
+c = a;
+a++;
+b += c;
+}
+public static void main(String args[]) {
+new Main1();
+}
+}

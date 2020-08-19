@@ -1,0 +1,158 @@
+package Quesion.Backend.Bussinesslayer;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import Quesion.Backend.Datalayer.UserReponsitory;
+import Quesion.Entity.User;
+import Utils.ScannerUtils;
+
+public class UserService implements IUserService{
+	private UserReponsitory userReponsitory;
+	
+	public UserService() {
+		userReponsitory = new UserReponsitory();
+	}
+	
+	public boolean chuanHoaEmail(String email) {
+		String standardized = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+		String e = email;
+		boolean check = e.matches(standardized);
+		return check;
+	}
+	
+	public boolean checkPassword(String passwork) {
+		boolean check = false;		
+		for (int i =0; i<passwork.length(); i++) {
+			if(Character.isUpperCase(passwork.charAt(i))&& passwork.length()>5 && passwork.length()<13){
+				check = true;
+			}
+		}
+		return check;
+	}
+
+	@Override
+	public void registerManager(String firstName, String lastName, String phone, String email, String password,int expInYear) throws SQLException {
+		String p = phone;
+		String e = email;
+		int exp = expInYear;
+		String pass = password;
+		boolean check = false;
+		while(!check) {
+			if (p.length() >= 9 && p.length() <= 12) {
+				check = true;
+			}
+			else {
+				p = ScannerUtils.inputString("So dien thoai nhap chua dung dinh dang(9-12 so). Nhap lai:");
+			}
+		}
+		check = false;
+		while(!check) {
+			if (chuanHoaEmail(e)) {
+				check = true;
+			}
+			else {
+				e = ScannerUtils.inputString("Email nhap chua dung dinh dang(xxx.xxxx@vti.com.vn). Nhap lai!");
+			}
+		}
+		check = false;
+		while(!check) {
+			if (exp >= 0 && exp <= 20) {
+				check = true;
+			}
+			else {
+				exp = ScannerUtils.inputInt("So nam kinh nghiem nhap chua dung(0-20). Nhap lai!");
+			}
+		}
+		check = false;
+		while(!check) {
+			if (checkPassword(pass)) {
+				check = true;
+			}
+			else {
+				pass = ScannerUtils.inputString("Pass nhập chua dung (6-12 ký tự). Nhap lai!");
+			}
+		}
+		userReponsitory.registerManager(firstName, lastName, p, e, pass, exp);
+	}
+
+	@Override
+	public void registerEmployee(String firstName, String lastName, String phone, String email, String password,String projectName, String proSkill) throws SQLException {
+		String p = phone;
+		String e = email;
+		String pass = password;
+		String projectname = projectName;
+		boolean check = false;
+		while(!check) {
+			if (p.length() >= 9 && p.length() <= 12) {
+				check = true;
+			}
+			else {
+				p = ScannerUtils.inputString("So dien thoai nhap chua dung dinh dang(9-12 so). Nhap lai");
+			}
+		}
+		check = false;
+		while(!check) {
+			if (chuanHoaEmail(e)) {
+				check = true;
+			}
+			else {
+				e = ScannerUtils.inputString("Email nhap chua dung dinh dang(xxx.xxxx@vti.com.vn). Nhap lai!");
+			}
+		}
+		check = false;
+		while(!check) {
+			if (checkPassword(pass)) {
+				check = true;
+			}
+			else {
+				pass = ScannerUtils.inputString("Pass nhập chua dung (6-12 ký tự). Nhap lai!");
+			}
+		}
+		check = false;
+		while(!check) {
+			if (projectname.equals("Testing System")) {
+				check = true;
+			}
+			else if (projectname.equals("CRM"))
+				check = true;
+			else if (projectname.equals("TimeSheet"))
+				check = true;
+			else {
+				projectname = ScannerUtils.inputString("Chi duoc nhap 1 trong 3 loai projectName (1.Testing System, 2.CRM, 3.TimeSheet). Nhap lai!");
+			}
+		}
+		
+		userReponsitory.registerEmployee(firstName, lastName, p, e, p, projectname, proSkill);	
+	}
+
+	@Override
+	public boolean isUserExists(String email, String password) throws SQLException {
+		String e = email;
+		String pass = password;
+		boolean check = false;
+		
+		while(!check) {
+			if (chuanHoaEmail(e)) {
+				check = true;
+			}
+			else {
+				e = ScannerUtils.inputString("Email nhap chua dung dinh dang(xxx.xxxx@vti.com.vn). Nhap lai!");
+			}
+		}
+		check = false;
+		while(!check) {
+			if (checkPassword(pass1)) {
+				check = true;
+			}
+			else {
+				System.out.println("Pass nhập từ 6 tới 12 ký tự, có ít nhất 1 ký tự viết hoa. Nhap lai!");
+				pass1 = ScannerUtils.inputString("Vui long nhap!");
+			}
+		}
+		
+		return userReponsitory.isUserExists(email1, pass1);
+	}
+	
+}
+

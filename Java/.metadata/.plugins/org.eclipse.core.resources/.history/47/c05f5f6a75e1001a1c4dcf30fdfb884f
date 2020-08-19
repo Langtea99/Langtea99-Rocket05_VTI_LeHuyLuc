@@ -1,0 +1,7 @@
+package Quesion.Backend.Bussinesslayer;
+
+import java.sql.SQLException;
+
+public interface IUserService {
+	public boolean isUserExists(String email,String password) throws SQLException;
+}

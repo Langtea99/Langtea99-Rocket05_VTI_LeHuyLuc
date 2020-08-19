@@ -1,0 +1,47 @@
+package Quesion.Fontend;
+
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import Quesion.Backend.Presentationlayer.UserController;
+import Quesion.Entity.Employee;
+import Quesion.Entity.Manager;
+import Quesion.Entity.User;
+import Utils.ScannerUtils;
+
+public class Main {
+
+	public static void main(String[] args) throws SQLException {
+		UserController userController = new UserController();
+		register();
+		login();
+	}
+
+	private static void login() {
+		
+		
+	}
+
+	private static void register() throws SQLException {
+		Scanner scanner = new Scanner(System.in);
+		User user = new User();
+		System.out.println("Nhap loai user muon tao (1.Manager, 2.Employee): ");
+		int choose = scanner.nextInt();
+		switch(choose){
+		case 1 :
+			user = new Manager();
+			user.register();
+			break;
+		case 2 :
+			user = new Employee();
+			user.register();
+			break;
+		default :
+			System.out.println("Nhập sai !");
+			break;
+		}
+	}
+}

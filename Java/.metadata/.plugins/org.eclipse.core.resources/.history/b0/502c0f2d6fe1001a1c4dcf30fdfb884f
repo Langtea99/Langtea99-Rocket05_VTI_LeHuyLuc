@@ -1,0 +1,13 @@
+package Quesion.Entity;
+
+import java.util.Scanner;
+
+public class Employee extends User{
+	private String projectName;
+	private String proSkill;
+	
+	public Employee(String firstName, String lastName, String phone, String email) {
+		super(firstName, lastName, phone, email);
+		this.proSkill = proSkill;
+	}
+}

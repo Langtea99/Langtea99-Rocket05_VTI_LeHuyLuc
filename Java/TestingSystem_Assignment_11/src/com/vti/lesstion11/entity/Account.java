@@ -1,26 +1,40 @@
 package com.vti.lesstion11.entity;
 
 public class Account {
-	private String username;
-	private String email;
-	public Account(String username, String email) {
-		super();
-		this.username = username;
-		this.email = email;
-	}
+	private int AccountID;
+	private String Email;
+	private String Username;
+	private String FullName;
+
 	public Account() {
-		// TODO Auto-generated constructor stub
 	}
-	public String getUsername() {
-		return username;
+
+	public Account(int accountID, String email, String username, String fullName) {
+		AccountID = accountID;
+		Email = email;
+		Username = username;
+		FullName = fullName;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+
+	public int getAccountID() {
+		return AccountID;
 	}
+
 	public String getEmail() {
-		return email;
+		return Email;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+
+	public String getUsername() {
+		return Username;
+	}
+
+	public String getFullName() {
+		return FullName;
+	}
+
+	@Override
+	public String toString() {
+		return "Account{" + "AccountID=" + AccountID + ", Email='" + Email + '\'' + ", Username='" + Username + '\''
+				+ ", FullName='" + FullName + '\'' + '}';
 	}
 }

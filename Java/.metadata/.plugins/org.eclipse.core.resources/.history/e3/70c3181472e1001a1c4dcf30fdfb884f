@@ -1,0 +1,31 @@
+package Quesion.Entity;
+
+import java.util.Scanner;
+
+import Quesion.Backend.Presentationlayer.UserController;
+import Utils.ScannerUtils;
+
+public class Manager extends User{
+	private int expInYear;
+	private static UserController userController;
+	public void Manager(){
+		userController = new UserController();
+	}
+	public Manager(String firstName, String lastName, String phone, String email) {
+		super(firstName, lastName, phone, email);
+		this.expInYear = expInYear;
+	}
+	public int getExpInYear() {
+		return expInYear;
+	}
+	public void setExpInYear(int expInYear) {
+		this.expInYear = expInYear;
+	}
+	@Override
+	public void register(){
+		super.register();
+		System.out.println("Nhap ExpInYear:");
+		int expInYear = ScannerUtils.inputInt("Nhap lai!");
+		userController.registerManager(firstName, lastName, phone, email, password, expInYear);
+	}
+}

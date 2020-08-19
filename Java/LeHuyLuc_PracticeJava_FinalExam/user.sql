@@ -1,0 +1,15 @@
+DROP DATABASE IF EXISTS user;
+CREATE DATABASE user;
+USE user;
+
+CREATE TABLE IF NOT EXISTS `users` (
+	id INT PRIMARY KEY AUTO_INCREMENT ,
+    firstName VARCHAR(50) NOT NULL,
+    lastName VARCHAR(50) NOT NULL,
+    phone VARCHAR(12) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE KEY,
+    `password` VARCHAR(100) NOT NULL,
+    expInYear INT,
+    projectName VARCHAR(100),
+    proSkill VARCHAR(100)
+);

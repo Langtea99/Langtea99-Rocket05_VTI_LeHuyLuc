@@ -1,0 +1,19 @@
+package Quesion.Entity;
+
+import java.util.Scanner;
+
+public class Manager extends User{
+	private int expInYear;
+	public Manager(String firstName, String lastName, String phone, String email) {
+		super(firstName, lastName, phone, email);
+		this.expInYear = expInYear;
+	}
+	public int getExpInYear() {
+		return expInYear;
+	}
+	public void setExpInYear(int expInYear) {
+		this.expInYear = expInYear;
+	}
+	@Override
+	public void register()
+}

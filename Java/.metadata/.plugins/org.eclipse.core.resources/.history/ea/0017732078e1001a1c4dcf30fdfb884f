@@ -1,0 +1,37 @@
+package Quesion.Backend.Bussinesslayer;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import Quesion.Backend.Datalayer.UserReponsitory;
+import Quesion.Entity.User;
+
+public class UserService implements IUserService{
+	private UserReponsitory userReponsitory;
+	
+	public UserService() {
+		userReponsitory = new UserReponsitory();
+	}
+
+	@Override
+	public void registerManager(String firstName, String lastName, String phone, String email, String pass,
+			int expInYear) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void registerEmployee(String firstName, String lastName, String phone, String email, String pass,
+			String projectName, String proSkill) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isUserExists(String email, String password) throws SQLException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+}
+

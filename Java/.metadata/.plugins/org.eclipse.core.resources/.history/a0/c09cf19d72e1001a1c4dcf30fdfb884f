@@ -1,0 +1,44 @@
+package Quesion.Entity;
+
+import java.util.Scanner;
+
+import Quesion.Backend.Presentationlayer.UserController;
+import Utils.ScannerUtils;
+
+public class Employee extends User{
+
+	private ProjectName projectName;
+	private String proSkill;
+	
+	private static UserController userController;
+	public Employee(){
+		userController = new UserController();
+	}
+	
+	public Employee(String firstName, String lastName, String phone, String email) {
+		super(firstName, lastName, phone, email);
+		this.proSkill = proSkill;
+	}
+	public ProjectName getProjectName() {
+		return projectName;
+	}
+
+	public void setProjectName(ProjectName projectName) {
+		this.projectName = projectName;
+	}
+
+	public String getProSkill() {
+		return proSkill;
+	}
+
+	public void setProSkill(String proSkill) {
+		this.proSkill = proSkill;
+	}	
+	@Override
+	public void register(){
+		super.register();
+		System.out.println("Nhap ExpInYear:");
+		expInYear = ScannerUtils.inputInt("Nhap lai!");
+		userController.registerManager(firstName, lastName, phone, email, password, expInYear);
+	}
+}

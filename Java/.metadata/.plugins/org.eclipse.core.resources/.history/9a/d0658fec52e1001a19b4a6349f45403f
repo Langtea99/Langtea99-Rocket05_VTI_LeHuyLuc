@@ -1,0 +1,14 @@
+
+public class Main1 {
+	static int count=0;
+	public Main1() {
+		count++;
+		}
+	public static void main(String[] args) {
+		new Main1();
+		new Main1();
+		new Main1();
+		System.out.println("count=" + count);
+	}
+
+}

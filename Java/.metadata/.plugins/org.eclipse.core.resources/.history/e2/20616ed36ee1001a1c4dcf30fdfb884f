@@ -1,0 +1,11 @@
+package Quesion.Entity;
+
+import java.util.Scanner;
+
+public class Manager extends User{
+	private int expInYear;
+	public Manager(String firstName, String lastName, String phone, String email) {
+		super(firstName, lastName, phone, email);
+		this.expInYear = expInYear;
+	}
+}

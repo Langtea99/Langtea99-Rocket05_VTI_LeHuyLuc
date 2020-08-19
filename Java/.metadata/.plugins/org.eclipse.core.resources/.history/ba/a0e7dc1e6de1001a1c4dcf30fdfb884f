@@ -1,0 +1,34 @@
+package Quesion.Entity;
+
+import java.util.Scanner;
+
+public class Employee extends User{
+	private String projectName;
+	private String proSkill;
+	
+	public boolean setProjectName(String projectName){
+		if( projectName == "Testing System" || projectName =="CRM" || projectName == "TimeSheet"){
+			this.projectName = projectName;
+			return true;
+		}else{
+			System.err.println("Nhap lai projectName ( Testing System or CRM or TimeSheet):");
+			return false;
+		}
+	}
+	
+	@Override
+	public void register(){
+		super.register();
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Nhap vao ki nang chuyen mon :");
+		proSkill = scanner.nextLine();
+		System.out.println("Nhap vao Project Name :");
+		while(true){
+			projectName = scanner.nextLine();
+			boolean check = setProjectName(projectName);
+			if(check){
+				break;
+			}
+		}		
+	}
+}

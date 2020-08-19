@@ -1,0 +1,62 @@
+package Quesion.Entity;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+import Utils.ScannerUtils;
+
+public class User {
+	protected String firstName;
+	protected String lastName;
+	protected String phone;
+	protected String email;
+	protected String password;
+	
+	public User(){
+		
+	}
+	public User(String firstName, String lastName, String phone, String email) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.phone = phone;
+		this.email = email;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	public void register() throws SQLException{
+		System.out.println("Nhap FirstName:");
+		firstName = ScannerUtils.inputString("Nhap sai nhap lai!");
+		System.out.println("Nhap LastName:");
+		lastName = ScannerUtils.inputString("Nhap sai nhap lai!");
+		System.out.println("Nhap Phone:");
+		phone = ScannerUtils.inputString("Nhap sai nhap lai !");
+		System.out.println("Nhap Email:");
+		email = ScannerUtils.inputString("Nhap lai!");
+		System.out.println("Nhap pass word:");
+		password = ScannerUtils.inputString("Nhap lai!");
+	}
+}
